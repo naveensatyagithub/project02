@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="contact_container">
+      <form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        class="left_container"
+      >
+        <div class="contact_left_tittle">
+          <input
+            type="hidden"
+            name="access_key"
+            value="f20f3081-ece8-4150-8925-e444d5dde761"
+          />
+
+          <h2>contact us</h2>
+          <hr />
+        </div>
+        <input
+          class="contact_inputs"
+          text="text"
+          name="name"
+          placeholder="ENTER YOUR NAME "
+        />
+        <input
+          class="contact_inputs"
+          type="email"
+          name="email"
+          placeholder="ENTER YOUR EMAIL"
+          id=""
+        />
+        <textarea
+          class="message"
+          name="message"
+          name="message"
+          placeholder="ENTER YOUR message "
+          id=""
+        ></textarea>
+        <button type="submit">
+          submit
+          <img src="arrow_icon.png" alt="" />
+        </button>
+      </form>
+      <div class="right_container">
+        <!--<img src="sun.gif"alt=""srcset="" >-->
+        <div id="observablehq-chart-7900780e"></div>
+      </div>
+    </div>
+    <p>
+      Credit:
+      <a href="https://observablehq.com/@d3/disjoint-force-directed-graph/2"
+        >Disjoint force-directed graph by D3</a
+      >
+    </p>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css"
+    />
+    <script type="module">
+      import {
+        Runtime,
+        Inspector,
+      } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+      import define from "https://api.observablehq.com/@d3/disjoint-force-directed-graph/2.js?v=4";
+      new Runtime().module(define, (name) => {
+        if (name === "chart")
+          return new Inspector(
+            document.querySelector("#observablehq-chart-7900780e")
+          );
+      });
+    </script>
+  </body>
+</html>
